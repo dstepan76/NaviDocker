@@ -3,7 +3,7 @@ WORKDIR /app
 
 FROM microsoft/dotnet:2.0-sdk AS build
 WORKDIR /src
-COPY ./NaviDocker.sln ././
+COPY NaviDocker.sln ./
 COPY DockerTest/DockerTest.csproj DockerTest/
 RUN dotnet restore -nowarn:msb3202,nu1503
 COPY . .
