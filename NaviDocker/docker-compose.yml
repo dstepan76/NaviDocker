@@ -3,6 +3,8 @@ version: '3'
 services:
   dockertest:
     image: dockertest
+    ports: 
+      - "8000:8000"
     build:
       context: .
       dockerfile: DockerTest/Dockerfile
