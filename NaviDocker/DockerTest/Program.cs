@@ -35,16 +35,14 @@ namespace DockerTest
                 Console.WriteLine($"Received {length} bytes.");
                 Console.WriteLine();
 
-                var str = System.Text.Encoding.UTF8.GetString(buf, 0, length);
+                var str = Encoding.UTF8.GetString(buf, 0, length);
 
                 Console.WriteLine(str);
 
                 client.Client.Send(Encoding.UTF8.GetBytes("HTTP/1.1 303 See Other"));
 
                 client.Close();
-                
             }
-
         }
     }
 }
